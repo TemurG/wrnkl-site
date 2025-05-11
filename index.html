@@ -16,8 +16,10 @@
     }
     header {
       background-image: url('sadcat.jpg');
-      background-size: cover;
-      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-color: #000; /* fallback if image has transparency */
       height: 90vh;
       display: flex;
       justify-content: center;
