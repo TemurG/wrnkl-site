@@ -114,21 +114,24 @@
     "i joined crypto for hope. now i have $wrnkl."
   ];
 
-  const el = document.getElementById("thought");
-  let i = 0;
-
-  function showNextThought() {
+document.addEventListener("DOMContentLoaded", () => {
+    const el = document.getElementById("thought");
     if (!el) return;
-    el.style.opacity = 0;
-    setTimeout(() => {
-      el.innerText = thoughts[i % thoughts.length];
-      el.style.opacity = 1;
-      i++;
-    }, 300);
-  }
 
-  showNextThought(); // initial
-  setInterval(showNextThought, 5000);
+    let i = 0;
+
+    function showNextThought() {
+      el.style.opacity = 0;
+      setTimeout(() => {
+        el.innerText = thoughts[i % thoughts.length];
+        el.style.opacity = 1;
+        i++;
+      }, 300);
+    }
+
+    showNextThought();
+    setInterval(showNextThought, 5000);
+  });
 </script>
   
 <body>
