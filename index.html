@@ -154,6 +154,11 @@ document.addEventListener("DOMContentLoaded", () => {
 <section id="roadmap" style="padding: 4rem 2rem; max-width: 700px; margin: auto; font-family: inherit; color: #000;">
   <h2 style="text-align: center; font-size: 2rem; margin-bottom: 2rem;">WRNKL Vibe-Powered Roadmap</h2>
 
+    <!-- Has Not Rugged Tracker -->
+  <div style="text-align: center; font-size: 1rem; margin-bottom: 2rem; color: #444;">
+    Has not rugged in <span id="rugged-days">0</span> days.
+  </div>
+  
   <ul style="list-style: none; padding: 0;">
     <li style="margin-bottom: 2rem; position: relative;">
       <span title="It happened. Somehow." style="font-size: 1.5rem; cursor: help;">✅ Launched in a Moment of Existential Clarity</span><br>
@@ -202,6 +207,15 @@ document.addEventListener("DOMContentLoaded", () => {
   </div>
   
  </section>
+
+  <script>
+  // Set your WRNKL launch date here:
+  const launchDate = new Date("2024-05-12"); // Update this if needed
+  const now = new Date();
+  const diffTime = Math.abs(now - launchDate);
+  const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+  document.getElementById("rugged-days").textContent = diffDays;
+</script>
 
   <section>
     <h2>Tokenomics</h2>
